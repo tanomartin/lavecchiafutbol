@@ -1,0 +1,102 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="HandheldFriendly" content="True"></meta><meta http-equiv="cache-control" content="public"></meta><meta http-equiv="expires" content="%EXPIRES%"></meta><meta http-equiv="pragma" content="public"></meta><link rel="alternate" media="handheld" href="/mobileSiteConnector/application/index.php?file=&amp;blockID=&amp;parantExt_1=&amp;parantExt_2="></link><meta name="viewport" content="width=device-width,user-scalable=yes"></meta><title>Sitio Móvil de </title><style type="text/css">
+			/* RESET */				
+			html, body, div, span, applet, object, iframe,  h1, h2, h3, h4, h5, h6, p,  blockquote, pre, a, abbr, acronym, address, big,  cite, code, del, dfn, em, font, img,  ins, kbd, q, s, samp, small, strike,  sub, sup, tt, var, dl, dt, dd, li,  fieldset, form, label, legend,  table, caption, tbody, tfoot, thead, tr, th, td,  center, u, b, i {
+				margin:0;
+				padding:0;
+				border:0;
+				font-weight:normal;
+				font-style:normal;
+				font-size:100%;
+				font-family:inherit;
+				vertical-align:baseline
+			}
+            body {
+				font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+				font-size:11pt;
+				background:#FFFFFF;
+				color:#666666;
+				margin:0;
+                line-height:1;
+			}
+			table {border-collapse: collapse; border-spacing:0;}
+			blockquote:before, blockquote:after, q:before, q:after {content:"";}
+			blockquote, q {quotes:"" "";}
+			input, textarea {margin:0;}
+			hr {margin: 0; padding: 0; border: 0; color:#000; background-color:#000; height:1px;}
+			/* FIN RESET */
+			
+			/* GENERALES */
+			.left {float:left;}
+			.right {float:right;}
+			.clear {clear:both; height:1px; font-size:1px;}
+			/* FIN GENERALES */
+			
+
+
+			.logo {margin:1em auto;}
+			.logo {margin-bottom:1.5em;}
+			
+			a, a:link, a:active {color:#0066CC;}
+			a:hover {color:#0066CC;}
+			a:visited {color:#0066CC;}
+			
+			h1, h2, h3, h4, h5, h6 {color:#333333; font-weight:bold; margin-bottom:0.3em; margin-top:0.5em;}
+			h1 {font-size:1.6em;}
+			h2 {font-size:1.4em;}
+			h3 {font-size:1.1em;}
+			
+			.description {
+				margin:2em 1em;
+				line-height:1.3em;
+			}
+			
+			p {font-size:1em; line-height:1.3em; margin-bottom:1.4em;}
+			.small {font-size:0.7em;}
+			
+			ul {margin-bottom:2em; margin-top:0; padding-left:20px;}
+			ol {margin-bottom:2em; margin-top:0; padding-left:25px;}
+
+			/* ICONOS OPCIONES */
+			a.optionItem {
+				display:block;
+				text-align:center;
+				width: 80px;
+				height: 95px;
+				float:left;
+				margin:0 10px 30px 10px;
+				text-decoration:none;
+			}
+			.optionItem img {
+				border:none;
+				margin-bottom:7px;
+			}
+			.optionItem span {
+				color:#0066CC;
+				display:block;
+				font-size:0.9em;
+				line-height:1.3;
+				width:80px;
+				overflow:hidden;
+			}
+			/* FIN ICONOS OPCIONES */
+			
+			/** INICIO FOOTER **/
+			#footer {
+				background:#DDDDDD url('http://200.58.115.134/images/bg_bar.jpg') repeat top center;
+				font-size:0.9em;
+				margin:3em 0 0;
+				padding:1em 1.5em;
+				text-align:center;
+				text-transform:uppercase;
+				border-top:1px solid #CCCCCC;
+			}
+			#footer ul {list-style:none; margin:0; padding:0;}
+			#footer li {display:inline; border-left:1px solid #999;}
+			#footer li.first {border-left:none;}
+			#footer li a {padding:0.5em 1em;}
+			#footer li a, #footer li a:link, #footer li a:active, #footer li a:visited {color:#0066CC;}
+			#footer li a:hover {color:#0099FF;}
+			/** FIN FOOTER **/
+		</style></head><body><img src="http://200.58.115.134/mwta/%googleAnalytics:%&amp;siteID=15025&amp;domainName=deprimerafutbol.com" width="1" height="1" alt=" "></img><div id="main"><p align="center" class="logo"><a href="/" title=""><img border="0" src="" alt=""></img></a></p><div class="description"></div><a href="/tellFriend/" rel="9" Title="Enviar a un amigo" class="optionItem"><img alt="Enviar a un amigo" src="http://200.58.115.134/theme/2/tellFriend-56.png" width="56" height="56"></img><span>Enviar a un amigo</span></a><a href="/page/2/" rel="2" Title="¿Dónde nos encuentras?" class="optionItem"><img alt="¿Dónde nos encuentras?" src="http://200.58.115.134/theme/2/map-56.png" width="56" height="56"></img><span>¿Dónde nos encuentras?</span></a><a href="/sendMessage/6/" rel="6" Title="Llámenme" class="optionItem"><img alt="Llámenme" src="http://200.58.115.134/theme/2/callme-56.png" width="56" height="56"></img><span>Llámenme</span></a><a href="/sendMessage/14/" rel="14" Title="Fomulario de contacto" class="optionItem"><img alt="Fomulario de contacto" src="http://200.58.115.134/theme/2/message-56.png" width="56" height="56"></img><span>Fomulario de contacto</span></a><div class="clear"> </div><div id="footer"><ul><li class="first"><a href="/mobileSiteConnector/application/index.php?desktopVersion=1">Versión Full</a></li></ul></div></div></body></html>
