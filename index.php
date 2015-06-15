@@ -1,3 +1,14 @@
+<?php 
+	$direccion = $_SERVER['REQUEST_URI'];
+	$findme   = 'deprimerafutbol';
+	$redireccion = strpos($direccion, $findme);
+	if ($dire === true) {
+		header("location: 'wwww.deprimerafutbol.com/trofeos'");
+		exit(0);
+	}
+
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
