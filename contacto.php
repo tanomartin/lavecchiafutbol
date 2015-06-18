@@ -243,7 +243,7 @@ print_r($grises);*/
 	}
 
 
-	#pie_repetir { margin:0 auto 0 auto; width:100%; height:44px;
+	#pie_repetir { margin:0 auto 0 auto; width:100%; height:70px;
 			background-image:url(img/home/pie1.jpg);
 			background-repeat:repeat-x;
    }
@@ -252,7 +252,7 @@ print_r($grises);*/
 		background-image:url(img/home/pie.jpg);
 		background-repeat:no-repeat;
 		width:999px;
-		height:44px;
+		height:70px;
 		margin:0 auto 0 auto;
 	}
 -->
@@ -372,8 +372,12 @@ function unFocus(input){
 	</div>
     <div id="gf" onclick="location.href='index.php'" style="cursor:pointer"></div>
     <div id="pie_repetir" style="float:left">
-      <div id="pie"></div>
-    </div>
+    <div id="pie">
+		<a href="http://www.facebook.com" target="_blank"><img src="img/home/facebook.png" style="width:40px; height:40px; float:left; margin-top:20px; margin-left:420px" /></a>
+		<a href="http://www.twitter.com" target="_blank"><img src="img/home/twitter.png" style="width:40px; height:40px; float:left; margin-top:20px; margin-left:15px" /></a>
+		<a href="mailto:info@lavecchiafutbol.com.ar"><img src="img/home/mail.png" style="width:40px; height:40px; float:left; margin-top:20px; margin-left:15px" /></a>
+	</div>
+  </div>
   </div>
 </form>
 </body>

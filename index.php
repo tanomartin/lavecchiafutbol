@@ -43,41 +43,45 @@ print_r($grises);*/
 	
 	#quienes_somos {
 		position: relative;
-		left: 790px;
-		top: 20px; /*442*/
+		left: 750px;
+		top: 5px;
 		width: 170px;
 		height: 25px;
-		/*background-color:#F00*/
+		cursor: pointer;
+		background-color:#F00
 	}	
 	
 	#reglamento { 
 		position: relative;
-		left: 790px;
-		top: 35px; /*442*/ 
+		left: 750px;
+		top: 15px; /*442*/ 
 		width: 170px; 
 		height: 25px;
 		text-align:left;
-		/*background-color:#F00*/
+		background-color:#F00;
+		cursor: pointer;
 	}	
 
 	#sedes { 
 		position: relative;
-		left: 790px;
-		top: 50px; /*442*/ 
+		left: 750px;
+		top: 25px;
 		width: 170px; 
 		height: 25px;
 		text-align:left;
-		/*background-color:#F00*/
+		background-color:#F00;
+		cursor: pointer;
 	}	
 
 	#contacto { 
 		position: relative;
-		left: 790px;
-		top:  65px; /*442*/ 
+		left: 750px;
+		top:  33px;
 		width: 170px; 
 		height: 25px;
 		text-align:left;
-		/*background-color:#F00*/
+		background-color:#F00;
+		cursor: pointer;
 	}	
 
 
@@ -152,6 +156,7 @@ print_r($grises);*/
 		width:581px;
 		height:44px;
 		margin:0 auto 0 auto;
+		float:left
 	}
 
 	#titulo_torneo {
@@ -159,7 +164,8 @@ print_r($grises);*/
 		background-repeat:no-repeat;
 		width:185px;
 		height:44px;;
-		margin:0 auto 0 auto;
+		margin:0 -18px 0 18px;
+		float:left
 	}
 
 	#titulo_auspiciante {
@@ -167,8 +173,9 @@ print_r($grises);*/
 		background-repeat:no-repeat;
 		width:185px;
 		height:44px;;
-		margin:0px 0px 0px 9px;
-		text-align:left;		
+		margin:5px 0px 0px 9px;
+		text-align:left;
+		float:left		
 	}
 
 	#cabezal3 {
@@ -179,16 +186,20 @@ print_r($grises);*/
 	#noticias {
 		width:531px;
 		margin:0 auto 0 auto;
+		float:left;
+		margin-left:40px;
 	}
 
 	#torneos {
+		float:left; 
+		text-align:center;
 		width:205px;
-		margin:0 auto 0 auto;
+		margin:0 -11px 0 20px;
 	}
 
 	#categoria {
-		width:205px;
-		cursor: pointer
+		width: 150px;
+		margin: 7px auto auto 7px;
 	}
 
 	#auspiciantes {
@@ -228,13 +239,13 @@ print_r($grises);*/
 	}
 
 	#gf{ 
-		position: absolute;
-		left:522px; 
-		top: 7px; /*442*/ 
+		left: 320px;
+		top:  -100px;
+		position: relative;
 		width: 300px; 
-		height: 200px;
-		text-align:left;
-	/*	background-color:#F00*/
+		height: 184px;
+		cursor:pointer; 
+		background:#993300;
 	}
 
 
@@ -279,19 +290,16 @@ $(document).ready(function() {
 	}); 
 </script>
 </head>
-<body align="center" bgcolor="#FFFFFF" border=0 style=" width:100%; height:100%" >
+<body align="center" bgcolor="#FFFFFF" border=0 style="width:100%; height:100%" >
 <?php include_once "include/analyticstracking.php"; ?>
 <div id="wrap">
   <div id="encabezado">
     <div id="cabezal">
-    <!--  <div id="quienes_somos"  style="cursor:pointer" onclick="window.location = 'quienes_somos.php';"></div>
-      <div id="reglamento" style="cursor:pointer"  onclick="window.location = 'reglamento.php';"></div>
-      <div id="sedes" style="cursor:pointer" onclick="window.location = 'sedes.php';"></div>
-      <div id="contacto"  style="cursor:pointer" onclick="window.location = 'contacto.php';"></div>-->
-	  <div id="quienes_somos"  style="cursor:pointer" onclick="window.location = '#';"></div>
-      <div id="reglamento" style="cursor:pointer"  onclick="window.location = '#';"></div>
-      <div id="sedes" style="cursor:pointer" onclick="window.location = #';"></div>
-      <div id="contacto"  style="cursor:pointer" onclick="window.location = '#';"></div>
+    	<div id="quienes_somos" onclick="window.location = 'quienes_somos.php';"></div>
+      	<div id="reglamento" onclick="window.location = 'reglamento.php';"></div>
+      	<div id="sedes" onclick="window.location = 'sedes.php';"></div>
+      	<div id="contacto"  onclick="window.location = 'contacto.php';"></div>
+		<div id="gf" onclick="location.href='index.php'"></div>
     </div>
   </div>
   <div id="cabezal1">
@@ -299,14 +307,14 @@ $(document).ready(function() {
   </div>
   </div>
   <div id="cabezal2">
-    <div id="titulo_cartelera" style="float:left"></div>
-    <div id="titulo_torneo" style="float:left"></div>
-    <div id="titulo_auspiciante" style="float:left"></div>
+    <div id="titulo_cartelera"></div>
+    <div id="titulo_torneo"></div>
+    <div id="titulo_auspiciante"></div>
   </div>
   <div id="cabezal3">
-    <div id="noticias" style="float:left; margin-left:50px">
+    <div id="noticias">
       <? if (count($noti) == 0) { ?>
-	  		<div align="center"><img src="img/home/sintorneos.png" width="200px" height="200px" /></div>
+	  		<div align="center"><img src="img/home/sintorneos.png" width="400px" height="400px" /></div>
 	  <? } else {
 	  		for ($i=0; $i<count($noti); $i++ ) {
                   $class = "gris2";
@@ -324,40 +332,39 @@ $(document).ready(function() {
 				  } else {
                     if ( ( $i % 2 ) == 0 )
                       $class = "gris1";
-                  }
-			} ?>
-      <div class="<?= $class ?>"> <span class="top"><span></span></span>
-        <div class="<?= $class_titulo ?>">
-          <?= $noti[$i]['titulo'] ?>
-        </div>
-        <div class="<?= $class_desarrollo ?>">
-          <?= $noti[$i]['desarrollo'] ?>
-        </div>
-        <hr  class="<?= $class_linea ?>"/>
-        <div class="<?= $class_fecha ?>">
-          <?= $noti[$i]['fecha'] ?>
-        </div>
-        <span class="bottom"><span></span></span> </div>
-      <br />
-      <? } ?>
-  <!--   <div align="center" > <a width="520px" height="600" class="twitter-timeline"  href="https://twitter.com/GambetaFemenina"  data-widget-id="446705375895494656">Tweets por @GambetaFemenina</a>
-        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-      </div>-->
+                  }?>
+			
+			  <div class="<?= $class ?>"> 
+			  	<span class="top"><span></span></span>
+				<div class="<?= $class_titulo ?>">
+				  <?= $noti[$i]['titulo'] ?>
+				</div>
+				<div class="<?= $class_desarrollo ?>">
+				  <?= $noti[$i]['desarrollo'] ?>
+				</div>
+				<hr  class="<?= $class_linea ?>"/>
+				<div class="<?= $class_fecha ?>">
+				  <?= $noti[$i]['fecha'] ?>
+				</div>
+				<span class="bottom"><span></span></span> </div>
+			  <br />
+      			<? }
+	  } ?>
     </div>
-    <div id="torneos" style="float:left">
+    <div id="torneos">
       <? if (count( $aTorneos ) == 0) { ?>
-	  		<div align="center"><img src="img/home/sintorneos.png"  width="200px" height="200px" />
+	  		<div><img src="img/home/sintorneos.png"  width="200px" height="200px" />
 	   <?	} else {
 			for ($i=0; $i<count( $aTorneos ); $i++) { 
 				$oObj = new TorneoCat();
 				$categoria = $oObj ->getByTorneo($aTorneos[$i][id]); ?>
-				<div id="categoria" style="clear:both"><span class="tituloHome<?= $aTorneos[$i]['color'] ?>"><?= strtoupper ($aTorneos[$i]['nombre'] ) ?></span></div>
 				<div align="center"><img src="logos/<?= $aTorneos[$i]['logoPrincipal'] ?>"  width="90px" height="95px" />
+				<div><span class="tituloHome<?= $aTorneos[$i]['color'] ?>"><?= strtoupper ($aTorneos[$i]['nombre'] ) ?></span></div>
 				 <hr class="linea" width="150px"></hr>
 				 <? for ($c=0; $c<count( $categoria); $c++) { ?>
-					<div class="categoria" onclick="pagina('<?= $categoria[$c][id]?>')" style="cursor: pointer; margin-top:7px; margin-bottom:7px; width:150px">
+					<div class="categoria" onclick="pagina('<?= $categoria[$c][id]?>')">
 						  <?= strtoupper ($categoria[$c][nombreCorto]); ?>
-						  <hr class="linea"></hr>
+						  <hr class="linea" width="150px"></hr>
 					</div>
 				<?	 }  ?>
 				</div>	
@@ -368,7 +375,6 @@ $(document).ready(function() {
     <div id="auspiciantes" style="float:left">
       <? include('auspiciantes.php'); ?>
     </div>
-    <div id="gf" onclick="location.href='index.php'" style="cursor:pointer"></div>
   </div>
   <div id="pie_repetir" style="float:left">
     <div id="pie">
