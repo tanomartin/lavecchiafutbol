@@ -75,7 +75,7 @@
 
 	#noticias {
 		width:531px;
-		margin:0 auto 0 auto;
+		margin:0 0 16px auto;
 		float:left;
 		margin-left:40px;
 	}
