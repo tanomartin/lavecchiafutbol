@@ -153,8 +153,8 @@ input.registro {
 	border:none; 
 	font-size:12px;
 	height:20px;
-	background-color: #DDD;
-	color:#e6017e;
+	background-color: #BFBFBF;
+	color:#FF947B;
 	vertical-align:middle;	
 }
 
@@ -308,3 +308,5 @@ textarea.registro {
 	font-size:12px;
 	font-weight:bold;
 }
+
+#wrap { margin:0 auto 0 auto; width:100%; height:100%  }

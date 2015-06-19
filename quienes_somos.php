@@ -22,82 +22,10 @@ print_r($grises);*/
 <link rel="stylesheet" href="css/equipos.css" type="text/css">
 <link rel="stylesheet" href="css/paginas.css" type="text/css">
 <style type="text/css">
-	<!--
-
-	#wrap { margin:0 auto 0 auto; width:100%; height:100%  }
 	
-	#encabezado { margin:0 auto 0 auto; width:100%; height:242px;
-			background-image:url(img/home/costados1.jpg);
-			background-repeat:repeat-x;
-   }
-
-	#cabezal {
-		background-image:url(img/home/cabezal.jpg);
-		background-repeat:no-repeat;
-		width:999px;
-		height:242px;
-		margin:0 auto 0 auto;
-	}
-	
-	
-	#quienes_somos {
-		position: relative;
-		left: 790px;
-		top: 20px; /*442*/
-		width: 170px;
-		height: 25px;
-		/*background-color:#F00;*/
-	}	
-	
-	#reglamento { 
-		position: relative;
-		left: 790px;
-		top: 35px; /*442*/ 
-		width: 170px; 
-		height: 25px;
-		text-align:left;
-		/*background-color:#F00;*/
-	}	
-
-	#sedes { 
-		position: relative;
-		left: 790px;
-		top: 50px; /*442*/ 
-		width: 170px; 
-		height: 25px;
-		text-align:left;
-		/*background-color:#F00;*/
-	}	
-
-	#contacto { 
-		position: relative;
-		left: 790px;
-		top:  65px; /*442*/ 
-		width: 170px; 
-		height: 25px;
-		text-align:left;
-		/*background-color:#F00;*/
-	}		
-	
-	#menu { 
-		position: relative;
-		left: 50px; 
-		top: 90px; /*442*/ 
-		text-align:left;
-	/*	background-color:#F00*/
-	}	
-
-
 	#cabezal1 {
 		width:999px;
 		margin:0 auto 0 auto;
-	}
-
-	#menu_izq1 {
-		float:left;
-		width:166px;
-		margin-left: 55px;
-		clear: both;
 	}
 
 	#imagen {
@@ -107,157 +35,65 @@ print_r($grises);*/
 		margin-left:-25px;
 	}
 
-	#categorias {
-		position:relative;		
-		width:570px;
-		height:34px;
-	}
-
-	#titulo_principal{
-		position:relative;
-		width:530px;
-		height:54px;
-		margin-left:50px
-	}
-		
-		
-	#faceytweet {
-		background-image:url(img/home/faceytweet.jpg);
-		background-repeat:no-repeat;
-		width:232px;
-/*		height:275px;*/
-		margin:0 auto 0 auto;
-	}
-
-
-	#campo_tiempo { 
-		position: relative;
-		left: 37px; 
-		top:  25px; /*442*/ 
-		width: 90px; 
-		height: 90px;
-		text-align:left;
-	}	
-	#facebook { 
-		position: relative;
-		left: 35px; 
-		top: 80px; /*442*/ 
-		width: 190px; 
-		height: 90px;
-		text-align:left;
-	}
-
-	#twitter { 
-		position: relative;
-		left: 110px; 
-		top: -10px; /*442*/ 
-		width: 190px; 
-		height: 90px;
-		text-align:left;
-	}
-
-	#fecha { 
-		position: relative;
-		left: 30px; 
-		top: -280px; /*442*/ 
-		width: 190px; 
-		height: 10px;
-		text-align:left;
-	}
-
-
 	#titulo_auspiciante {
 		background-image:url(img/home/titulo_auspiciante.jpg);
 		background-repeat:no-repeat;
 		width:185px;
 		height:44px;;
 		margin:0px 0px 0px -9px;
-		text-align:left;		
+		text-align:left;	
+		float:left;	
 	}
 	
 	#auspiciantes {
 		width:210px;
 		margin:0px 0px 0px 240px;
-		text-align:left;		
+		text-align:left;	
+		float:left;	
 	}
 
-	#gf{ 
-		position: absolute;
-		left:520px; 
-		top: 0px; /*442*/ 
-		width: 300px; 
-		height: 200px;
-		text-align:left;
-	/*	background-color:#F00*/
-	}
-
-
-	#pie_repetir { margin:0 auto 0 auto; width:100%; height:70px;
-			background-image:url(img/home/pie1.jpg);
-			background-repeat:repeat-x;
-   }
-
-	#pie{
-		background-image:url(img/home/pie.jpg);
-		background-repeat:no-repeat;
-		width:999px;
-		height:70px;
-		margin:0 auto 0 auto;
-	}
-	
-
--->
 </style>
+<link href='css/shadowbox.css' rel='stylesheet' type='text/css'/>
+<script src='js/shadowbox-1b8e4a9.js' type='text/javascript'/>
 <script type="text/javascript" src="_js/funciones.js"></script>
-<script>
+<script type='text/javascript'> 
 	function pagina(id){
 		document.getElementById('id').value= id;		
 		document.form_alta.action = "noticias.php";
 		document.form_alta.submit();
 	}
-</script>
-<link href='css/shadowbox.css' rel='stylesheet' type='text/css'/>
-<script src='js/shadowbox-1b8e4a9.js' type='text/javascript'/>
-</script>
-<script type='text/javascript'> 
+	
 	Shadowbox.init({ 
 		overlayColor: "#000", 
 		overlayOpacity: "0.6", 
 	});    
 </script>
+
 </head>
-<body   align="center" bgcolor="#FFFFFF" border=0 style=" width:100%; height:100%" >
-<form id="form_alta" name="form_alta" action="" method="post">
-  <input name="id" id="id"  value="<?= $_POST['id'] ?>" type="hidden" />
-  <input name="color" id="color"  value="<?= $color ?>" type="hidden" />
+<body align="center" bgcolor="#FFFFFF" border=0 style=" width:100%; height:100%" >
   <div id="wrap">
-    <div id="encabezado">
-      <div id="cabezal">
-        <div id="quienes_somos"  style="cursor:pointer" onclick="window.location = 'quienes_somos.php';"></div>
-        <div id="reglamento" style="cursor:pointer"  onclick="window.location = 'reglamento.php';"></div>
-        <div id="sedes" style="cursor:pointer" onclick="window.location = 'sedes.php';"></div>
-        <div id="contacto"  style="cursor:pointer" onclick="window.location = 'contacto.php';"></div>
-      </div>
-    </div>
+    <? include_once "botonera.php" ?>
     <div id="cabezal1" style="margin-top:5px" align="center">
-      <? for ($i=0; $i<count( $aTorneos ); $i++) {   
-				$oObj = new TorneoCat();
-				$categoria = $oObj ->getByTorneo($aTorneos[$i][id]); ?>
-      <img src="logos/<?= $aTorneos[$i]['logoMenu'] ?>"  border="0" width="43px" height="54px" onclick="pagina('<?= $categoria[0][id]?>')" style="cursor: pointer"/>
-      <? } ?>
-      <div id="menu"></div>
+      <div id="menu">
+        <? for ($i=0; $i<count( $aTorneos ); $i++) {   
+					$oObj = new TorneoCat();
+					$categoria = $oObj ->getByTorneo($aTorneos[$i][id]); ?>
+        <img src="logos/<?= $aTorneos[$i]['logoMenu'] ?>"  border="0" width="43px" height="54px" onclick="pagina('<?= $categoria[0][id]?>')" style="cursor: pointer"/>
+        <? } ?>
+      </div>
       <div id="imagen" style="float:left; vertical-align:top">
         <div style="float:left; margin-left:48px"> <img src="img/quienes_somos/quienes_somos.jpg" /> </div>
       </div>
-      <div id="auspiciantes" style="float:left;">
-        <div id="titulo_auspiciante" style="float:left"></div>
+      <div id="auspiciantes">
+        <div id="titulo_auspiciante"></div>
         <? include('auspiciantes.php'); ?>
       </div>
     </div>
-    <div id="gf" onclick="location.href='index.php'" style="cursor:pointer"></div>
-    <div id="pie_repetir" style="float:left">
-      <div id="pie"> <a href="http://www.facebook.com" target="_blank"><img src="img/home/facebook.png" style="width:40px; height:40px; float:left; margin-top:20px; margin-left:420px" /></a> <a href="http://www.twitter.com" target="_blank"><img src="img/home/twitter.png" style="width:40px; height:40px; float:left; margin-top:20px; margin-left:15px" /></a> <a href="mailto:info@lavecchiafutbol.com.ar"><img src="img/home/mail.png" style="width:40px; height:40px; float:left; margin-top:20px; margin-left:15px" /></a> </div>
-    </div>
+    <? include_once('pie.php') ?>
   </div>
-</form>
+  </div>
+<form id="form_alta" name="form_alta" action="" method="post">
+  <input name="id" id="id"  value="<?= $_POST['id'] ?>" type="hidden" />
+  <input name="color" id="color"  value="<?= $color ?>" type="hidden" />
+  </form>
 </body>

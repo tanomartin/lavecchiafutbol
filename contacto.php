@@ -1,13 +1,8 @@
 <?	include_once "include/config.inc.php";
 	include_once "model/torneos.categorias.php";
 	include_once "model/torneos.php";
-	
-	
 	$oObj = new Torneos();
 	$aTorneos = $oObj->getByCant(CANT_TORNEOS); 
-	
-/*print_r($rosa); echo "avavav<br>";
-print_r($grises);*/
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
@@ -19,70 +14,6 @@ print_r($grises);*/
 <meta name="keywords" content="fútbol femenino - torneo fútbol femenino - torneo fútbol 5 - futbol para mujeres - entrenamientos fútbol femenino - torneo de chicas - futbol para chicas - competencia para mujeres">
 <link rel="stylesheet" href="css/home.css" type="text/css">
 <style type="text/css">
-	<!--
-
-	#wrap { margin:0 auto 0 auto; width:100%; height:100%  }
-	
-	#encabezado { margin:0 auto 0 auto; width:100%; height:242px;
-			background-image:url(img/home/costados1.jpg);
-			background-repeat:repeat-x;
-   }
-
-	#cabezal {
-		background-image:url(img/home/cabezal.jpg);
-		background-repeat:no-repeat;
-		width:999px;
-		height:242px;
-		margin:0 auto 0 auto;
-	}
-	
-	#quienes_somos {
-		position: relative;
-		left: 790px;
-		top: 20px; /*442*/
-		width: 170px;
-		height: 25px;
-		/*background-color:#F00;*/
-	}	
-	
-	#reglamento { 
-		position: relative;
-		left: 790px;
-		top: 35px; /*442*/ 
-		width: 170px; 
-		height: 25px;
-		text-align:left;
-		/*background-color:#F00;*/
-	}	
-
-	#sedes { 
-		position: relative;
-		left: 790px;
-		top: 50px; /*442*/ 
-		width: 170px; 
-		height: 25px;
-		text-align:left;
-		/*background-color:#F00;*/
-	}	
-
-	#contacto { 
-		position: relative;
-		left: 790px;
-		top:  65px; /*442*/ 
-		width: 170px; 
-		height: 25px;
-		text-align:left;
-		/*background-color:#F00;*/
-	}		
-	
-	#menu { 
-		position: relative;
-		left: 50px; 
-		top: 90px; /*442*/ 
-		text-align:left;
-	/*	background-color:#F00*/
-	}	
-
 
 	#cabezal1 {
 		width:999px;
@@ -100,112 +31,61 @@ print_r($grises);*/
 
 	#campo_nombre { 
 		position: relative;
-		left:  55px; 
-		top: 39px; /*442*/ 
-		width: 150px; 
+		left: 30px; 
+		top: 36px; 
+		width: 140px; 
 		height: 20px;
 		text-align:left;
 	}
 
 	#campo_email { 
 		position: relative;
-		left:  55px; 
-		top: 49px; /*442*/ 
-		width: 150px; 
+		left:  30px; 
+		top: 47px; /*442*/ 
+		width: 140px; 
 		height: 20px;
 		text-align:left;
 	}
+	
 	#campo_telefono { 
 		position: relative;
-		left:  55px; 
-		top: 59px; /*442*/ 
-		width: 150px; 
+		left:  30px; 
+		top: 58px; /*442*/ 
+		width: 140px; 
 		height: 20px;
 		text-align:left;
 	}	
+	
 	#campo_mensaje { 
 		position: relative;
-		left:  430px; 
-		top: -10px; /*442*/ 
+		left:  410px; 
+		top: -13px; 
 		width: 325px; 
 		height: 140px;
-		text-align:left;
-		/*background-color:#F00;*/
+		text-align:left; 
 	}	
+	
+	#mensaje {
+		resize: none;
+		height:137px; 
+		width:322px;
+	}
 
 	#boton { 
 		position: relative;
-		left: 320px; 
-		top: -30px; /*442*/ 
-		width: 80px; 
-		height: 40px;
+		left: 302px; 
+		top: -39px; 
+		width: 66px; 
+		height: 46px;
 		border:none;
 		cursor:pointer;
-		/*background-color:#F00;*/
-		
-	}
-
-	#faceytweet {
-		background-image:url(img/home/faceytweet.jpg);
-		background-repeat:no-repeat;
-		width:232px;
-		height:275px;
-		margin:0 auto 0 auto;
-	}
-
-
-	#campo_tiempo { 
-		position: relative;
-		left: 37px; 
-		top:  25px; /*442*/ 
-		width: 90px; 
-		height: 90px;
-		text-align:left;
-	}	
-	#facebook { 
-		position: relative;
-		left: 35px; 
-		top: 80px; /*442*/ 
-		width: 190px; 
-		height: 90px;
-		text-align:left;
-	}
-
-	#twitter { 
-		position: relative;
-		left: 110px; 
-		top: -10px; /*442*/ 
-		width: 190px; 
-		height: 90px;
-		text-align:left;
-	}
-
-	#fecha { 
-		position: relative;
-		left: 30px; 
-		top: -280px; /*442*/ 
-		width: 190px; 
-		height: 10px;
-		text-align:left;
-	}
-
-	#cabezal2 {
-		width:900px;
-		height:44px;
-		margin:0 auto 0 auto;
-	}
-	
-	#cabezal3 {
-		width:999px;
-		margin:0 auto 0 auto;
 	}
 
 	#descripcion { 
 		position: relative;
 		left: 50px; 
-		top:  35px; /*442*/ 
-		width: 500px; 
-		_width: 430px; 		
+		top:  35px; 
+		width: 500px; 	
 		height: 90px;
 		text-align:left;
 	}
@@ -226,39 +106,12 @@ print_r($grises);*/
 		text-align:left;		
 	}
 
-	#auspiciantes1 {
-		width:210px;
-		margin:5px auto 0 20px;
-		border-left: 2px solid #CCC;
-	}
-
-	#gf{ 
-		position: absolute;
-		left:520px; 
-		top: 0px; /*442*/ 
-		width: 300px; 
-		height: 200px;
-		text-align:left;
-	/*	background-color:#F00*/
-	}
-
-
-	#pie_repetir { margin:0 auto 0 auto; width:100%; height:70px;
-			background-image:url(img/home/pie1.jpg);
-			background-repeat:repeat-x;
-   }
-
-	#pie{
-		background-image:url(img/home/pie.jpg);
-		background-repeat:no-repeat;
-		width:999px;
-		height:70px;
-		margin:0 auto 0 auto;
-	}
--->
 </style>
+<link href='css/shadowbox.css' rel='stylesheet' type='text/css'/> 
+<script type="text/javascript" src="js/shadowbox-1b8e4a9.js" /> </script> 
 <script type="text/javascript" src="_js/funciones.js"></script>
-<script>
+<script type="text/javascript">
+
 	function validar(){
 		
 		if (trim(document.form_alta.nombre.value) =="" ||  ( document.form_alta.nombre.value == document.form_alta.nombre.defaultValue)){
@@ -293,74 +146,63 @@ print_r($grises);*/
 		document.form_alta.submit();
 	}
 	
-	
-</script>
-<script>
 	function pagina(id){
 		document.getElementById('id').value= id;		
 		document.form_alta.action = "noticias.php";
 		document.form_alta.submit();
 	}
-</script>
-<link href='css/shadowbox.css' rel='stylesheet' type='text/css'/> 
-<script src='js/shadowbox-1b8e4a9.js' type='text/javascript'/> </script> 
-<script type='text/javascript'> 
+	
 	Shadowbox.init({ 
 		overlayColor: "#000", 
 		overlayOpacity: "0.6", 
 	});    
-</script>
-<script language="JavaScript"> 
-
-function clickFocus(input){
+	
+	function clickFocus(input){
 	if (input.value == input.defaultValue){
-		input.value = '';
+			input.value = '';
+			input.background = '#FF947B';
 		}
-}
+	}
 
-function unFocus(input){
-	if (input.value == ''){
-		input.value = input.defaultValue;
+	function unFocus(input){
+		if (input.value == ''){
+			input.value = input.defaultValue;
+			input.background = '##BFBFBF';
 		}
-}
- 
+	}
+	
 </script>
+
 </head>
 <body align="center" bgcolor="#FFFFFF" border=0 style=" width:100%; height:100%" >
 <form id="form_alta" name="form_alta" action="enviar_mail.php" method="post">
   <input name="id" id="id"  value="-1" type="hidden" />
   <input name="accion" id="accion"  value="registro" type="hidden" />
   <div id="wrap">
-    <div id="encabezado">
-      <div id="cabezal">
-        <div id="quienes_somos"  style="cursor:pointer" onclick="window.location = 'quienes_somos.php';"></div>
-        <div id="reglamento" style="cursor:pointer"  onclick="window.location = 'reglamento.php';"></div>
-        <div id="sedes" style="cursor:pointer" onclick="window.location = 'sedes.php';"></div>
-        <div id="contacto"  style="cursor:pointer" onclick="window.location = 'contacto.php';"></div>
-       </div>
-    </div>
+     <? include_once "botonera.php" ?>
     <div id="cabezal1" style="margin-top:5px" align="center">
-    <? for ($i=0; $i<count( $aTorneos ); $i++) {   
-	   		$oObj = new TorneoCat();
-			$categoria = $oObj ->getByTorneo($aTorneos[$i][id]);?>
-          	<img src="logos/<?= $aTorneos[$i]['logoMenu'] ?>"  border="0" width="43px" height="54px" onclick="pagina('<?= $categoria[0][id]?>')" style="cursor: pointer"/>
-    <? } ?>
-		  <div id="menu"></div>    
+    	<div id="menu">
+		<? for ($i=0; $i<count( $aTorneos ); $i++) {   
+				$oObj = new TorneoCat();
+				$categoria = $oObj ->getByTorneo($aTorneos[$i][id]);?>
+				<img src="logos/<?= $aTorneos[$i]['logoMenu'] ?>"  border="0" width="43px" height="54px" onclick="pagina('<?= $categoria[0][id]?>')" style="cursor: pointer"/>
+		<? } ?>
+		  </div>    
 		  <div id="imagen" style="float:left; vertical-align:top" align="left">
 			<div id="descripcion" class="descripcion">
 				  <p><b>Realiz&aacute; ac&aacute; tu consulta</b></p>
 				  Record&aacute; que si ya est&aacute;s inscripta en alguno de los Torneos, pod&eacute;s dejarnos tu consulta directamente en nuestro Facebook o Twitter </div>
 				<div id="campo_nombre">
-				  <input name="nombre" id="nombre" class="registro" maxlength="50" type="text" value="NOMBRE Y APELLIDO" size="45"  onfocus="clickFocus(this)" onblur="unFocus(this)" >
+				  <input name="nombre" id="nombre" class="registro" maxlength="50" type="text" value="NOMBRE Y APELLIDO" size="43" onfocus="clickFocus(this)" onblur="unFocus(this)" >
 				</div>
 				<div id="campo_email">
-				  <input name="email" id="email" class="registro" maxlength="100" size="45" type="text" value="EMAIL"  onfocus="clickFocus(this)" onblur="unFocus(this)" >
+				  <input name="email" id="email" class="registro" maxlength="100" size="43" type="text" value="EMAIL"  onfocus="clickFocus(this)" onblur="unFocus(this)" >
 				</div>
 				<div id="campo_telefono">
-				  <input name="telefono" id="telefono" class="registro" maxlength="50" size="45" type="text" value="TELEFONO"  onfocus="clickFocus(this)" onblur="unFocus(this)" >
+				  <input name="telefono" id="telefono" class="registro" maxlength="50" size="43" type="text" value="TELEFONO"  onfocus="clickFocus(this)" onblur="unFocus(this)" >
 				</div>
 				<div id="campo_mensaje">
-				  <textarea name="mensaje" id="mensaje" style="height:137px; width:322px" class="registro"  onfocus="clickFocus(this)" onblur="unFocus(this)" >Mensaje</textarea>
+				  <textarea name="mensaje" id="mensaje" class="registro"  onfocus="clickFocus(this)" onblur="unFocus(this)" >Mensaje</textarea>
 				</div>
 				<div id="boton" onclick="validar()"></div>
 			</div>
@@ -370,13 +212,7 @@ function unFocus(input){
 			</div> 
 		  </div>	
 	</div>
-    <div id="gf" onclick="location.href='index.php'" style="cursor:pointer"></div>
-    <div id="pie_repetir" style="float:left">
-    <div id="pie">
-		<a href="http://www.facebook.com" target="_blank"><img src="img/home/facebook.png" style="width:40px; height:40px; float:left; margin-top:20px; margin-left:420px" /></a>
-		<a href="http://www.twitter.com" target="_blank"><img src="img/home/twitter.png" style="width:40px; height:40px; float:left; margin-top:20px; margin-left:15px" /></a>
-		<a href="mailto:info@lavecchiafutbol.com.ar"><img src="img/home/mail.png" style="width:40px; height:40px; float:left; margin-top:20px; margin-left:15px" /></a>
-	</div>
+     <? include_once('pie.php') ?>
   </div>
   </div>
 </form>
