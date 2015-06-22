@@ -14,13 +14,6 @@
 		<div class="menu_borde" id="menu_equipos" onclick="cambiar_menu('equipos.php')">
         </div>    
 <? } ?>
-<? if ($modulo == 'equipoideal' ) { ?>
-		<div class="menu_borde_selec" id="menu_equipoideal_seleccionada">
-       </div> 
-<? } else { ?>
-		<div class="menu_borde" id="menu_equipoideal" onclick="cambiar_menu('equipoideal.php')">
-        </div>    
-<? } ?>
 <? if ($modulo == 'fixture' ) { ?>
 		<div class="menu_borde_selec" id="menu_fixture_seleccionada">
        </div> 
