@@ -29,8 +29,6 @@
 	#imagen {
 		float:left;		
 		width:570px;
-		margin-top:5px;
-		margin-left:-25px;
 	}
 	
 	#titulo_auspiciante {
@@ -44,7 +42,7 @@
 	
 	#auspiciantes {
 		width:210px;
-		margin:0px 0px 0px 240px;
+		margin:0px 0px 0px 215px;
 		text-align:left;		
 	}
 </style>
@@ -68,7 +66,7 @@
   <div id="wrap">
     <? include_once "botonera.php" ?>
     <div id="cabezal1" style="margin-top:5px" align="center">
-     <div id="menu">
+      <div id="menu">
 	  <? for ($i=0; $i<count( $aTorneos ); $i++) {   
 					$oObj = new TorneoCat();
 					$categoria = $oObj ->getByTorneo($aTorneos[$i][id]);?>
@@ -76,7 +74,7 @@
       <? } ?>
       </div>
       <div id="imagen" style="float:left; vertical-align:top">
-        <div style="float:left; margin-left:100px"> <img src="img/reglamento/titulo.jpg" />
+	      <img src="img/reglamento/titulo.jpg" />
           <?= html_entity_decode($oReg ->descripcion) ?>
         </div>
       </div>
