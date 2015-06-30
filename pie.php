@@ -16,10 +16,10 @@
 	}
 	
 	#social {
-		width:55px;
-		height:55px; 
+		width:40px;
+		height:40px; 
 		float:right; 
-		margin-top:25px;
+		margin-top:28px;
 		margin-right:10px
 	}
 

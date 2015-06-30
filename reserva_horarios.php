@@ -154,7 +154,8 @@ Shadowbox.init({
               <input type="password" id="pwd" name="pwd" placeholder="Contraseña" style="text-align:center" onkeypress="return pulsar(event)">
             </p>
             <p>
-              <input type="button" name="ingresar" id="ingresar" value="Ingresar"/>
+			 <img id="ingresar" src='img/reservas/boton_entrar.jpg' border='0' width="135" height="34" style="cursor:pointer" />
+             <!--<input type="button" name="ingresar" id="ingresar" value="Ingresar"/>-->
             </p>
           </div>
         </div>

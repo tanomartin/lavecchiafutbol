@@ -56,7 +56,8 @@
 
 </style>
 <link href='css/shadowbox.css' rel='stylesheet' type='text/css'/>
-<script src='js/shadowbox-1b8e4a9.js' type='text/javascript'/></script>
+<script src='js/shadowbox-1b8e4a9.js' type='text/javascript'/>
+</script>
 <script type="text/javascript" src="_js/funciones.js"></script>
 <script>
 	function cambiar(id){
@@ -79,7 +80,6 @@
 		overlayOpacity: "0.6", 
 	});
 </script>
-
 </head>
 <body align="center" bgcolor="#FFFFFF" border=0 style=" width:100%; height:100%" >
 <?php include_once "include/analyticstracking.php"; ?>
@@ -88,7 +88,7 @@
   <input name="fecha" id="fecha"  value="<?= $fecha ?>" type="hidden" />
   <input name="idActual" id="idActual"  value="<?= $_POST['id'] ?>" type="hidden" />
   <div id="wrap">
-     <? include_once "botonera.php" ?>
+    <? include_once "botonera.php" ?>
     <div id="cabezal1">
       <div id="menu_izq1" style="float:left"> <img  src="logos/<?= $oTorneo->logoPagina?>" />
         <? include("menu_izq.php") ?>
@@ -132,17 +132,17 @@
         </div>
         <div id="fixture_<?= $color ?>">
           <div  id="fixture_titulo" class="fixture_titulo1 fixture_color_<?= $color ?>">
-		  		<?= strtoupper ($aFixture[0]['nombreFecha']) ?>
-		  </div>
-		</div>
-		<div id="fixture_<?= $color ?>" style="margin-top:-17px">
+            <?= strtoupper ($aFixture[0]['nombreFecha']) ?>
+          </div>
+        </div>
+        <div id="fixture_<?= $color ?>" style="margin-top:-17px">
           <div id="fixture_paginas"  class="fixture_paginado fixture_color_<?= $color ?>">
             <?  $total =count($aFechas);
 				for ($i=1; $i<= $total; $i++ ) { if ($i != $fecha) echo '<a style="cursor:pointer" onclick="paginar('.$i.')">'.$i.'</a>';  if (($i != $total && $i != $fecha && $fecha != $total) || ($fecha == $total && $i+1<$fecha)) echo " - " ;}?>
           </div>
         </div>
         <? for ($p=0; $p<count($aFixture); $p++) {?>
-        <a id="link_fixture" href="detalleFixture.php?color=<?= $color ?>&idEquipo1=<?= $aFixture[$p][idEquipo1]?>&idEquipo2=<?= $aFixture[$p][idEquipo2]?>&id=<?= $aFixture[$p][id]?>&keepThis=true&TB_iframe=true&height=600&width=600" title="" class="thickbox">
+        <a id="link_fixture" href="detalleFixture.php?color=<?= $color ?>&idEquipo1=<?= $aFixture[$p][idEquipo1]?>&idEquipo2=<?= $aFixture[$p][idEquipo2]?>&id=<?= $aFixture[$p][id]?>&keepThis=true&TB_iframe=true&height=600&width=600" title="Click para ver el detalle del partido" class="thickbox">
         <div id="partido_<?= $color ?>">
           <div id="fixture_nro_partido"><? echo $p+1; ?></div>
           <div id="fixture_sede"><? echo strtoupper ($aFixture[$p]['sede']); ?></div>
@@ -185,14 +185,13 @@
           <? } ?>
         </div>
       </div>
-	   <div id="auspiciantes" >
-		  <div id="titulo_auspiciante"><img src="img/home/titulo_auspiciante.jpg" /></div>
-			<? include('auspiciantes.php'); ?>
-		  </div>
-       </div>
+      <div id="auspiciantes" >
+        <div id="titulo_auspiciante"><img src="img/home/titulo_auspiciante.jpg" /></div>
+        <? include('auspiciantes.php'); ?>
+      </div>
     </div>
-    
-   <? include_once('pie.php') ?>
+  </div>
+  <? include_once('pie.php') ?>
   </div>
 </form>
 </body>
